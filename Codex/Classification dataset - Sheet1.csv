@@ -1,0 +1,1139 @@
+NL,PL
+,
+Train a MLP model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mlp(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a Lenet model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=Lenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a Alexnet model with Adam optimizer with a batch size of  32 ,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Alexnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a vgg model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a resnet model with Adam optimizer with a batch size of  32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=resnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train an EfficientNet model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=efficientnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a resnet32 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet32(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a resnet50 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet50(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a squeezenet model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=squeezenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a mobilenet v1 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a mobilenet v2 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv2(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train an inception v1 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train an inception v3 model with Adam optimizer with a batch size of 32,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv3(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=32)"
+Train a MLP model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mlp(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a MLP model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mlp(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a MLP model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mlp(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a Lenet model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""""""Training"""""""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Lenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a Lenet model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""""""Training"""""""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Lenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a Lenet model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""""""Training"""""""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Lenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train an Alexnet model with Adam optimizer with a batch size of  8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Alexnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train an Alexnet model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Alexnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train an Alexnet model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""""""Training"""""""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=Alexnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a vgg model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a vgg model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a vgg model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a resnet model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a resnet model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a resnet model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)                                     
+model=vgg(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train an EfficientNet model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=efficientnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train an EfficientNet model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=efficientnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train an EfficientNet model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+model=efficientnet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a resnet32 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet32(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a resnet32 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet32(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a resnet32 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet32(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a resnet50 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet50(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a resnet50 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet50(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a resnet50 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""Training"", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=resnet50(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a squeezenet model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=squeezenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a squeezenet model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=squeezenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a squeezenet model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=squeezenet(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a mobilenet v1 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a mobilenet v1 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a mobilenet v1 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train a mobilenet v2 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv2(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train a mobilenet v2 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv2(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train a mobilenet v2 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=mobilenetv2(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train an inception v1 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train an inception v1 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train an inception v1 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv1(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"
+Train an inception v3 model with Adam optimizer with a batch size of 8,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv3(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=8)"
+Train an inception v3 model with Adam optimizer with a batch size of 16,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv3(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=16)"
+Train an inception v3 model with Adam optimizer with a batch size of 64,"def train(model, iterator, optimizer, criterion, device):
+    epoch_loss = 0
+    epoch_acc = 0
+    model.train()
+    for (x, y) in tqdm(iterator, desc=""""Training"""", leave=False):
+        x = x.to(device)
+        y = y.to(device)
+        optimizer.zero_grad()
+        y_pred, _ = model(x)
+        loss = criterion(y_pred, y)
+        acc = calculate_accuracy(y_pred, y)
+        loss.backward()
+        optimizer.step()
+        epoch_loss += loss.item()
+        epoch_acc += acc.item()
+    return epoch_loss / len(iterator), epoch_acc / len(iterator)
+  
+model=inceptionv3(INPUT_DIM)
+optimizer=optim.Adam(model.parameters())
+criterion = nn.CrossEntropyLoss()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+iterator= data.DataLoader(Data,shuffle=True,batch_size=BATCH_SIZE=64)"

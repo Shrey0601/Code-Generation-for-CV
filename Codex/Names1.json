@@ -1,0 +1,4 @@
+{
+    "resize an image": {"nl" : "resize an image","code" : "def resize(img, scale):   return cv2.resize(img, None, fx=scale, fy=scale, interpolation=cv2.INTER_CUBIC)"},
+    "enlarge a picture to twice its size ": {"nl" : "enlarge a picture to twice its size ","code" : "def resize_image(img):   return cv2.resize(img, (2*img.shape[1], 2*img.shape[0]), interpolation=cv2.INTER_CUBIC)"}
+}
